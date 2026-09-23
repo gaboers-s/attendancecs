@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary Blue */
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-light: #3b82f6;
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-500: #3b82f6;
+  
+  /* Neutrals */
+  --color-surface: #ffffff;
+  --color-background: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-border-light: #f1f5f9;
+  
+  /* Text */
+  --color-text: #0f172a;
+  --color-text-secondary: #64748b;
+  --color-text-muted: #94a3b8;
+  
+  /* Status */
+  --color-success: #22c55e;
+  --color-success-50: #f0fdf4;
+  --color-danger: #ef4444;
+  --color-danger-50: #fef2f2;
+  --color-warning: #f59e0b;
+  --color-warning-50: #fffbeb;
+}
+
+@layer base {
+  body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer utilities {
+  .field-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #475569;
+  }
+
+  .field {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    background: #fff;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.875rem;
+    color: #0f172a;
+    outline: none;
+  }
+
+  .field:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px #dbeafe;
+  }
+
+  .button-primary,
+  .button-secondary {
+    border-radius: 0.5rem;
+    padding: 0.65rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+  }
+
+  .button-primary {
+    background: #2563eb;
+    color: white;
+  }
+
+  .button-primary:hover {
+    background: #1d4ed8;
+  }
+
+  .button-primary:disabled {
+    cursor: wait;
+    opacity: 0.65;
+  }
+
+  .button-secondary {
+    border: 1px solid #e2e8f0;
+    color: #475569;
+  }
+
+  .button-secondary:hover {
+    background: #f8fafc;
+  }
+
+  .card {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  }
+  
+  .card-hover:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+  }
+}
